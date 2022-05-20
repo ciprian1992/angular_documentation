@@ -9,6 +9,7 @@ const routes: Routes = [
         (m) => m.ProjectionModule
       ),
   },
+  { path: 'dynamic-components', loadChildren: () => import('./features/dynamic-components/dynamic-components.module').then(m => m.DynamicComponentsModule) },
 ];
 
 @NgModule({
