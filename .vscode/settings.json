@@ -13,4 +13,5 @@
     },
     "editor.formatOnSave": false
   },
+  "prettier.endOfLine": "crlf",
 }

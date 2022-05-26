@@ -23,6 +23,14 @@ const routes: Routes = [
         (m) => m.CustomElementsModule
       ),
   },
+  {
+    path: 'two-way-binding',
+    loadChildren: () =>
+      import('./features/two-way-binding/two-way-binding.module').then(
+        (m) => m.TwoWayBindingModule
+      ),
+  },
+  { path: 'structural-directive', loadChildren: () => import('./features/structural-directive/structural-directive.module').then(m => m.StructuralDirectiveModule) },
 ];
 
 @NgModule({
