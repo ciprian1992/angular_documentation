@@ -9,7 +9,6 @@ import { SimpleComponent } from './features/custom-elements/components/simple/si
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {

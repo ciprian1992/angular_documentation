@@ -30,11 +30,33 @@ const routes: Routes = [
         (m) => m.TwoWayBindingModule
       ),
   },
-  { path: 'structural-directive', loadChildren: () => import('./features/structural-directive/structural-directive.module').then(m => m.StructuralDirectiveModule) },
+  {
+    path: 'structural-directive',
+    loadChildren: () =>
+      import(
+        './features/structural-directive/structural-directive.module'
+      ).then((m) => m.StructuralDirectiveModule),
+  },
+  {
+    path: 'dependency-injection',
+    loadChildren: () =>
+      import(
+        './features/dependency-injection/dependency-injection.module'
+      ).then((m) => m.DependencyInjectionModule),
+  },
+  {
+    path: 'lightweight-injection-token',
+    loadChildren: () =>
+      import(
+        './features/lightweight-injection-token/lightweight-injection-token.module'
+      ).then((m) => m.LightweightInjectionTokenModule),
+  },
+  { path: 'for-root', loadChildren: () => import('./features/for-root/for-root.module').then(m => m.ForRootModule) },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [],
 })
 export class AppRoutingModule {}
